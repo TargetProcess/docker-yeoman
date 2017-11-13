@@ -12,4 +12,4 @@ GENERATOR_NAME="$1"
 
 cd /tmp-generated
 su-exec node yo "${GENERATOR_NAME}" "${@:2}" --no-insight --skip-install
-cp -r /tmp-generated /generated
+cp -r /tmp-generated/. /generated
