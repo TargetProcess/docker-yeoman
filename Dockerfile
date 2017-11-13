@@ -1,9 +1,9 @@
 FROM node:6-alpine
 
-USER root
+RUN echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories
 
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
+    apk add --no-cache bash git openssh shadow su-exec
 
 RUN npm install --global --silent yo
 
