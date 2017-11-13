@@ -10,6 +10,7 @@ RUN npm install --global --silent yo
 ENV LANG en_US.UTF-8
 
 RUN mkdir /generated
+RUN mkdir /tmp-generated
 WORKDIR /generated
 
 ADD entrypoint.sh /usr/local/sbin/
